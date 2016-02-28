@@ -59,7 +59,7 @@ def usage():
     print('-o/--output: enter an value as an output through stdin')
     # in C there is a much more easy-understanding way to implement
     print('-v: verbose')
-    print(__doc__)
+    #print(__doc__)
     # TODO: output format
 
 
@@ -83,6 +83,7 @@ def main():
     # case 'h':// help
     # case '?':// invalid OPTION
     # case ':':// invalid VAR of option opt
+    
     for o, a in opts:
         if o == '-v':
             verbose = True
