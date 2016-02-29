@@ -82,8 +82,7 @@ def main():
     # ...
     # case 'h':// help
     # case '?':// invalid OPTION
-    # case ':':// invalid VAR of option opt
-    
+    # case ':':// invalid VAR of option opt 
     for o, a in opts:
         if o == '-v':
             verbose = True
@@ -95,7 +94,6 @@ def main():
             print('Value entered is %s' % output)
         else:
             assert False, 'Invalid option %s' % o
-
     if verbose:
         print('Verbose set True')
 
