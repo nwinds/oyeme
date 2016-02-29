@@ -5,15 +5,15 @@ import datetime # simple time cost calculating tool
 # get randomized generator
 class TestGen(object):
     """ test case generator """
-    def __init__(self, N, itemNum, inversedPercent=2, chrRange=256):
-        self.N = N
+    def __init__(self, count, itemNum, inversedPercent=2, chrRange=256):
+        self.count = count
         self.itemNum = itemNum
         self.inversedPercent = inversedPercent
         self.chrRange = chrRange
 
     def generate(self):
         lst = []
-        for i in range(self.N):
+        for _ in range(self.N):
             r = random.randrange(self.itemNum)
             items = [i for i in range(r)]
             random.shuffle(items)
@@ -22,7 +22,7 @@ class TestGen(object):
                 if item % self.inversedPercent == 0:
                     subDict['_id'] = item
                 else:
-                    subDict[ chr(item % self.chrRange) ] = item
+                    subDict[chr(item % self.chrRange)] = item
             lst.append(subDict)
         return lst
 
