@@ -15,7 +15,7 @@ class TestGen(object):
         lst = []
         for i in range(self.N):
             r = random.randrange(self.itemNum)
-            items = [i for i in range(r)]
+            items = [j for j in range(r)]
             random.shuffle(items)
             subDict = {}
             for item in items:  # 1/self.inversedPercent of total items include '_id', lets rock !
