@@ -9,8 +9,11 @@ __author__ = "nwinds"
 import matplotlib.pyplot as plt
 
 # texts generator
+
+
 def cesar(shift):
-    s = raw_input('Enter a string(4 words with 3 space as seperator will be okay): ')
+    s = raw_input(
+        'Enter a string(4 words with 3 space as seperator will be okay): ')
     cipherStr = ''
     for ch in s:
         if ch == ' ':
@@ -20,7 +23,7 @@ def cesar(shift):
         else:
             cipherStr += chr(ord(ch) + shift - ord('z') + ord('a'))
     return cipherStr.split(' ')
-    
+
 
 cipher = cesar(3)
 
@@ -35,7 +38,7 @@ b4 = (190 / 255.0, 208 / 255.0, 247 / 255.0)
 
 
 # base on http://matplotlib.org/examples/pylab_examples/fancytextbox_demo.html
-
+# TODO: Gaussian distribution of boxes' position, much more good looking
 plt.text(0.40, 0.6, cipher[0], size=60, rotation=-20.,
          ha="center", va="center",
          bbox=dict(boxstyle="round",
